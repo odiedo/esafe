@@ -37,11 +37,7 @@ The Maseno University Safety & Security App is a comprehensive solution designed
 
 ## Collaboration and Support
 
-I welcome collaboration and contributions from the community. If you have ideas, bug fixes, or new features to propose, please feel free to open a pull request or discuss it in the issues section. For questions or support, you can reach out to me at odiedopaul@gmail.com(mailto:odiedopaul@gmail.com).
-
-## Legal and Ethical Considerations
-
-Please be aware of legal and ethical considerations when using features like facial recognition and data privacy. Ensure compliance with applicable laws and regulations in your jurisdiction.
+I welcome collaboration and contributions from the community. If you have ideas, bug fixes, or new features to propose, please feel free to open a pull request or discuss it in the issues section. For questions or support, you can reach out to me at odiedopaul@gmail.com.
 
 
 Your feedback and contributions are highly valued, and we look forward to making the Maseno University Safety & Security App a valuable tool for enhancing safety and security in your community.
