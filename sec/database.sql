@@ -8,9 +8,6 @@ CREATE TABLE `prof_pic` (
     `image_up` longtext NOT NULL    
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-
-
 DROP TABLE IF EXISTS `p_user`;
 CREATE TABLE `p_user` (
     `user_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,

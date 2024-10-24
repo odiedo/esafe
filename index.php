@@ -1,91 +1,110 @@
 <html>
 <head>
-    <title>DCI</title>
+    <title>E-Safe Security</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    
     <!-- External CSS libraries -->
     <link type="text/css" rel="stylesheet" href="sec/assets/css/bootstrap.min.css">
-
     <link type="text/css" rel="stylesheet" href="sec/assets/fonts/font-awesome/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="sec/assets/fonts/flaticon/font/flaticon.css">
-
+    
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="sec/assets/img/favicon.ico" type="image/x-icon" >
-
+    <link rel="shortcut icon" href="sec/assets/img/favicon.ico" type="image/x-icon">
+    
     <!-- Custom Stylesheet -->
     <link type="text/css" rel="stylesheet" href="sec/assets/css/style.css">
     <style>
-        body{
-    background-color: #000;
-    color: white;
-}
-.card-primary:not(.card-outline) > .card-header {
-    background-color: #8A080A;
-}
-.card-primary:not(.card-outline) > .card-header,
-.card-primary:not(.card-outline) > .card-header a {
-    color: #ffffff;
-}
-.card-primary:not(.card-outline) > .card-header a.active {
-    color: #1F2D3D;
-}
-.card-primary.card-outline {
-    border-top: 3px solid #8A080A;
-}
+        body {
+            background-color: #09030C; 
+            color: white;
+            font-family: 'Roboto', sans-serif; 
+        }
 
-.m-safe{
-    top: 50%; 
-    left:50%; 
-    position:absolute; 
-    transform: translate(-50%, -50%); 
-    max-width:350px; 
-    width:100%;
-}
-.m-safe .row {
-    line-height: 25px;
-}
-img {
-    height: 180px; 
-    width: 180px; 
-    border-radius: 50%;
-}
-.card-header{
-    color: white;
-    text-shadow: 0px 0px 10px yellow; 
-    text-align: center;
-}
-.inst{
-    text-align: center; 
-    font-family: serif; 
-}
+        .card {
+            background: rgba(0,0,0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #8A080A;
+
+        }
+        .card-body {
+            position: relative;
+            background: rgba(0,0,0, 0.5);
+        }
+
+        .card-body img {
+            border-radius: 50%;
+            border: 2px solid #8A080A;
+        }
+        h4 {
+            color: #F0F0F0;
+            letter-spacing: 1px;
+        }
+        .form-control {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #8A080A;
+            color: #F0F0F0;
+            border-radius: 0;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-bottom-color: #00FFFF;
+        }
+        button[type="submit"] {
+            background-color: #8A080A;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #00FFFF;
+            color: black;
+        }
+        p.fst-italic {
+            color: #A9A9A9; 
+        }
     </style>
 </head>
-<body style="background-color:#09030C;">
-<div class="container m-safe">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-primary card-outline bg-transparent">
-                    <div class="card-body">
-                        <center><img src="sec/assets/img/jr.png"></center>
-                        <div class="text-light inst h6">
-                        Login Credentials   
+<body>
+
+<div class="container m-safe mt-2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card bg-dark text-light shadow-lg rounded">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <img src="sec/assets/img/logo.png" alt="E-safe logo" class="img-fluid mb-3" style="width: 80px;">
+                        <h4 class="fw-bold">Login Credentials</h4>
+                    </div>
+                    <form action="log.php" method="post">
+                        <div class="mb-3">
+                            <input type="tel" name="id_number" placeholder="ID Number" autocomplete="off" class="form-control bg-transparent text-danger" required>
                         </div>
-                        <form action="log.php" method="post">
-                            <div class="login" style="font-family: agency fb;">
-                                <input type="tel" name="id_number" placeholder="ID Number" autocomplete="off" class="form-control border-top-0 text-danger w-100 border-right-0 border-left-0 bg-transparent" required><br>
-                                <input type="password" name="password" placeholder="Password" class="form-control border-top-0 w-100 text-danger border-right-0 border-left-0 bg-transparent" required><br>
-                                <button class="border-0 w-100" name="login-submit" onmousedown="login()" style="color: white; text-align: center; background-color: #8A080A; font-family: serif;">Login</button>            
-                            </div>
-                        </form>
-                        <h6 class="text-center text-danger">or</h6>
-                        <center><span>*************************</span></center>
-                    <p style="color: white; text-align: center;font-family: serif; bottom: 0%;"><i>Register now, stay safe, be kind, protect comrade</i></p>
-                    <p style="text-align: right;"><a href="city_reg.php" class="text-primary btn btn-primary bg-transparent">Create an Account</a></p>
+                        <div class="mb-3">
+                            <input type="password" name="password" placeholder="Password" class="form-control bg-transparent text-danger" required>
+                        </div>
+                        <button type="submit" name="login-submit" class="btn btn-danger w-100 py-2 text-uppercase fw-bold">
+                            Login
+                        </button>
+                    </form>
+                    <div class="text-center mt-4">
+                        <p class="text-muted">or</p>
+                        <span class="d-block mb-3">*************************</span>
+                        <p class="text-muted fst-italic">Register now, stay safe, be kind, protect comrade</p>
+                        <a href="city_reg.php" class="mt-3">Create an Account</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Bootstrap JS with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-qOpMl4Mo3i47XkqhGH02tSe6dGL4C/JTCHc04UqAaYChGflbOOBu+bz6y8QK+Iq+" crossorigin="anonymous"></script>
+
 </body>
 </html>
